@@ -107,7 +107,7 @@ public class Lab1 {
         nerd = new GenericNerd("Donnie Doofus", 8);
         nerdList.add(nerd);
         
-        
+        // Gamer Geeks
         nerd = new GamerGeek("PC Gamer", 1, 8);
         nerdList.add(nerd);
         nerd = new GamerGeek("PS5 Gamer", 2, 10);
@@ -115,6 +115,35 @@ public class Lab1 {
         nerd = new GamerGeek("Xbox Gamer", 3, 3);
         nerdList.add(nerd);
         
+        //Gamer Geek Error Testing (Bad Nerd Factor)
+        /*
+        nerd = new GamerGeek("Bad PC Gamer", 1, 4);
+        nerdList.add(nerd);
+        nerd = new GamerGeek("Bad PS5 Gamer", 2, 11);
+        nerdList.add(nerd);
+        nerd = new GamerGeek("Bad Xbox Gamer", 3, 7);
+        nerdList.add(nerd);
+        */
+        
+        //Gamer Geek Error Testing (Invalid Console)
+        /*
+        nerd = new GamerGeek("Invalid Gamer 0", 0, 4);
+        nerdList.add(nerd);
+        nerd = new GamerGeek("Invalid Gamer 4", 4, 8);
+        nerdList.add(nerd);
+        */
+        
+        //Cosplay Trekkies
+        nerd = new CosPlayTrekkie("Joe Mother", 7, false, true, "Vulcan");
+        nerdList.add(nerd);
+        nerd = new CosPlayTrekkie("Glenn", 4, true, true, "Borg drone");
+        nerdList.add(nerd);
+        nerd = new CosPlayTrekkie("Jimmy", 10, true, false, "Klingon");
+        nerdList.add(nerd);
+        
+        //Test of polymorphism
+        Trekkie t = new CosPlayTrekkie("Randy", 5, false, true, "Federation Officer");
+        nerdList.add(t);
         
         // print out a list of the nerds:
         showNerdList(nerdList);

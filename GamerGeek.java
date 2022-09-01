@@ -12,20 +12,15 @@ public class GamerGeek extends GenericNerd {
     public GamerGeek(String name, int console, int nerdFactor)
     {
         super(name,nerdFactor);
-        if(name == null)
-        {
-            System.out.println("Error: GamerGeek constructor - name is null!");
-            System.exit(1);
-        }
         
         if(console == 1 && nerdFactor < 5 || nerdFactor < 1 || nerdFactor > 10)
         {
-            System.out.println("Warning: Nerd factor for PC gamer must be above 5 (using default 5");
+            System.out.println("Warning: Nerd factor for PC gamer must be above 5 (using default 5)");
             this.nerdFactor = 5;
         }
         else if(console == 3  && nerdFactor > 6 || nerdFactor < 1 || nerdFactor > 10)
                 {
-                    System.out.println("Warning: Nerd factor for Xbox gamer must be between 1 and 6 (using default 6");
+                    System.out.println("Warning: Nerd factor for Xbox gamer must be between 1 and 6 (using default 6)");
                     this.nerdFactor = 6;
                 }
         
@@ -42,8 +37,8 @@ public class GamerGeek extends GenericNerd {
                break;
        }
         
-        
-        this.name = name;
+        //this.name = name;
+        this.console = console;
     }
     
       public String toString()
@@ -55,13 +50,11 @@ public class GamerGeek extends GenericNerd {
        Harass this nerd.  Harassment is based upon the nerd's nerd factor.
        Postcondition: A message indicating how to harass this nerd is printed.
      */
-    @Override
     public void harass()
     {
-        System.out.println("You tell nerd " + name + getHarassment());
+        System.out.println("You tell nerd " + name + " " + getHarassment());
     }
     
-    @Override
     public String getHarassment()
     {
         String harassment = null;
@@ -77,7 +70,7 @@ public class GamerGeek extends GenericNerd {
                 harassment = new String("You sure must enjoy seeing ads on your console!");
                 break;
             default: // this should never happen!
-                System.out.println("Error: unrecognized error code!!!");
+                System.out.println("Error: unrecognized console code!!!");
                 System.exit(2);
         }
         return harassment;

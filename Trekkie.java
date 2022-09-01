@@ -7,8 +7,8 @@ package uhh.lab1;
 public class Trekkie extends GenericNerd {
     
     //Removed name and nerdFactor
-    private boolean speaksKlingon;
-    private boolean kirkBetterThanPicard;
+    public boolean speaksKlingon;
+    public boolean kirkBetterThanPicard;
     
 
     
